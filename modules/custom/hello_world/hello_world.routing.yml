@@ -1,0 +1,42 @@
+hello_world.content:
+  path: '/hello'
+  defaults:
+    _controller: '\Drupal\hello_world\Controller\HelloController::content'
+    _title: 'Hello World'
+  requirements:
+    _permission: 'access content'
+    
+
+hello_world.form:
+ path: '/resume/myform'
+ defaults:
+   _title: 'Application form'
+   _form: '\Drupal\hello_world\Form\ResumeForm'
+ requirements:
+   _permission: 'access content'
+   
+   
+hello_world.tableselect:
+ path: '/tableselect/form'
+ defaults:
+   _title: 'Application table select form'
+   _form: '\Drupal\hello_world\Form\TableSelectForm'
+ requirements:
+   _permission: 'access content'
+   
+hello_world.csvupload:
+ path: '/csvupload/batch'
+ defaults:
+   _title: 'CSV upload'
+   _form: '\Drupal\hello_world\Form\CsvUploadForm'
+ requirements:
+   _permission: 'access content'
+   
+   
+hello_world.resume_form_data:
+ path: '/resume/myform/data'
+ defaults:
+   _title: 'Application form data'
+   _controller: '\Drupal\hello_world\Controller\ResumeFormData::resume_form_data'
+ requirements:
+   _permission: 'access content'
